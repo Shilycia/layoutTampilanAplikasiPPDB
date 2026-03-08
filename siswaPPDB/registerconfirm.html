@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pendaftaran - PASS SYSTEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#22AD73',
+                            dark: '#2B4175',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light font-sans min-h-screen flex items-center justify-center py-12 px-4">
+
+    <div class="max-w-4xl w-full bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+        
+        <div class="md:w-1/3 bg-brand-dark p-10 text-white flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold shadow-lg">P</div>
+                    <span class="font-black text-sm tracking-tighter uppercase italic">Register Akun</span>
+                </div>
+
+                <h2 class="text-2xl font-bold leading-tight mb-8">Satu Langkah Lagi Menuju Final.</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-brand-primary/20 flex items-center justify-center text-xs font-bold border-2 border-brand-primary/50 text-brand-primary">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Informasi Akun</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-brand-primary/20 flex items-center justify-center text-xs font-bold border-2 border-brand-primary/50 text-brand-primary">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Data Sekolah</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 rounded-full bg-brand-primary flex items-center justify-center text-xs font-bold border-2 border-brand-primary">3</div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-primary">Konfirmasi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative z-10 pt-10 border-t border-white/10">
+                <p class="text-[10px] font-medium text-slate-400 leading-relaxed italic">
+                    Periksa kembali seluruh data. Setelah dikirim, beberapa data inti hanya dapat diubah melalui admin sekolah.
+                </p>
+            </div>
+        </div>
+
+        <div class="md:w-2/3 p-10 lg:p-14 bg-white overflow-y-auto max-h-[700px]">
+            <div class="mb-8">
+                <h3 class="text-2xl font-black text-brand-dark uppercase tracking-tighter">Ringkasan Pendaftaran</h3>
+                <p class="text-xs text-slate-400 font-medium mt-1 italic text-brand-primary">Mohon validasi ulang data Anda sebelum menekan tombol kirim.</p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="text-[10px] font-bold text-brand-dark uppercase tracking-widest">A. Data Personal & Akun</h4>
+                        <button class="text-[9px] font-bold text-brand-primary hover:underline">UBAH</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-y-4">
+                        <div>
+                            <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">Nama Lengkap</p>
+                            <p class="text-xs font-bold text-slate-700">ANDINI PUTRI PRATAMA</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">Email</p>
+                            <p class="text-xs font-bold text-slate-700">andini.putri@example.com</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">WhatsApp</p>
+                            <p class="text-xs font-bold text-slate-700">0812-3456-7890</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="text-[10px] font-bold text-brand-dark uppercase tracking-widest">B. Informasi Pendidikan</h4>
+                        <button class="text-[9px] font-bold text-brand-primary hover:underline">UBAH</button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">Asal Sekolah</p>
+                                <p class="text-xs font-bold text-slate-700">SMP NEGERI 1 MERDEKA</p>
+                            </div>
+                            <div>
+                                <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">NPSN</p>
+                                <p class="text-xs font-bold text-slate-700 font-mono">20104432</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[9px] text-slate-400 uppercase font-bold tracking-tighter">Alamat Sekolah</p>
+                            <p class="text-xs font-bold text-slate-700 italic">Jl. Pendidikan No. 45, Kota Jakarta Pusat, DKI Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-5 rounded-2xl border border-amber-100">
+                    <label class="flex items-start gap-4 cursor-pointer">
+                        <input type="checkbox" class="mt-1 w-5 h-5 text-brand-primary rounded border-amber-300 focus:ring-brand-primary">
+                        <p class="text-[10px] font-bold text-amber-800 leading-normal uppercase">
+                            Saya menyatakan bahwa seluruh data di atas adalah benar dan saya bertanggung jawab penuh atas validitas informasi tersebut.
+                        </p>
+                    </label>
+                </div>
+
+                <div class="flex gap-4 pt-4">
+                    <button class="flex-1 py-4 bg-brand-primary text-white rounded-xl font-bold text-xs uppercase tracking-widest shadow-xl shadow-green-100 hover:bg-green-700 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        SUBMIT & SELESAI
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
