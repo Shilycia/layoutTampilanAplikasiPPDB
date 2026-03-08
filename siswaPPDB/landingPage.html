@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan Siswa Baru - PASS SYSTEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#22AD73', // Hijau Identitas PPDB
+                            dark: '#2B4175',    // Biru Pass System
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light font-sans text-slate-800">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-dark rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">P</div>
+                <span class="font-black text-xl tracking-tighter text-brand-dark uppercase">PASS SYSTEM</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-500 uppercase tracking-widest">
+                <a href="#" class="hover:text-brand-primary transition-colors">Beranda</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Alur PPDB</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Biaya</a>
+                <a href="#" class="bg-brand-dark text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-all shadow-md">Login Siswa</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-primary/10 rounded-full border border-brand-primary/20">
+                    <span class="w-2 h-2 bg-brand-primary rounded-full animate-pulse"></span>
+                    <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest">Pendaftaran Gelombang 1 Dibuka</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-brand-dark leading-[1.1] tracking-tighter">
+                    Mulai Masa Depan Gemilang <span class="text-brand-primary">Disini.</span>
+                </h1>
+                <p class="text-lg text-slate-500 leading-relaxed max-w-lg">
+                    Selamat datang di Portal PPDB Online. Sistem pendaftaran terpadu yang memudahkan Anda bergabung menjadi bagian dari keluarga besar sekolah kami.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <button class="px-8 py-4 bg-brand-primary text-white rounded-2xl font-bold text-sm shadow-xl shadow-green-200 hover:scale-105 transition-all">
+                        DAFTAR SEKARANG
+                    </button>
+                    <button class="px-8 py-4 bg-white border border-slate-200 text-brand-dark rounded-2xl font-bold text-sm hover:bg-slate-50 transition-all flex items-center gap-2">
+                        LIHAT PANDUAN 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-primary/10 rounded-full blur-3xl"></div>
+                <div class="bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100 rotate-2 relative z-10">
+                    <img src="../asset/studistudent.png" alt="Students" class="rounded-[2rem] w-full grayscale-0 hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-brand-dark p-8 rounded-3xl shadow-2xl z-20 text-white hidden md:block">
+                    <p class="text-4xl font-black">1.250+</p>
+                    <p class="text-[10px] uppercase font-bold tracking-widest opacity-60">Pendaftar Aktif</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border-l border-white/10 hover:bg-white/5 transition-all group">
+                    <p class="text-brand-primary text-[10px] font-bold uppercase tracking-widest mb-2 italic">Campaign Aktif</p>
+                    <h3 class="text-white text-xl font-bold mb-2">PPDB TA 2026/2027</h3>
+                    <p class="text-slate-400 text-sm">Pendaftaran resmi dibuka untuk jenjang pendidikan menengah tahun ajaran baru.</p>
+                </div>
+                <div class="p-8 border-l border-white/10 hover:bg-white/5 transition-all group">
+                    <p class="text-brand-primary text-[10px] font-bold uppercase tracking-widest mb-2 italic">Periode Berjalan</p>
+                    <h3 class="text-white text-xl font-bold mb-2">Gelombang 1 - Prestasi</h3>
+                    <p class="text-slate-400 text-sm">Berakhir pada: <span class="text-white font-mono">30 April 2026</span>.</p>
+                </div>
+                <div class="p-8 border-l border-white/10 hover:bg-white/5 transition-all group">
+                    <p class="text-brand-primary text-[10px] font-bold uppercase tracking-widest mb-2 italic">Bantuan Sistem</p>
+                    <h3 class="text-white text-xl font-bold mb-2">Punya Pertanyaan?</h3>
+                    <p class="text-slate-400 text-sm">Hubungi tim verifikator kami melalui WhatsApp atau Email resmi sekolah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
