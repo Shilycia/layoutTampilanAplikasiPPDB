@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Teknis - Smart School Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tech: {
+                            dark: '#0F172A',     
+                            sidebar: '#1E293B',  
+                            accent: '#38BDF8',   
+                            danger: '#F43F5E',
+                            success: '#10B981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] font-sans text-slate-700">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="w-64 bg-tech-sidebar text-slate-300 flex flex-col fixed h-full shadow-2xl z-10 hidden md:flex">
+            <div class="h-16 flex items-center px-6 bg-tech-dark/50 border-b border-slate-700">
+                <div class="w-8 h-8 bg-tech-accent rounded flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-tech-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <span class="font-bold text-sm tracking-widest text-white">SYS-ADMIN</span>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-1">
+                <a href="#dashboard" class="flex items-center px-4 py-3 bg-tech-accent/10 text-tech-accent rounded-lg font-medium">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    Dashboard
+                </a>
+                <a href="#backup" class="flex items-center px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg transition-all">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    Backup Database
+                </a>
+                <a href="#config" class="flex items-center px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg transition-all">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    Config Aplikasi
+                </a>
+            </nav>
+            <div class="p-4 bg-tech-dark/30 border-t border-slate-700 text-[10px] font-mono">
+                <p>User ID: ADMIN-TX-2026</p>
+                <p class="text-slate-500 mt-1">Version 2.4.0-stable</p>
+            </div>
+        </aside>
+
+        <main class="flex-1 md:ml-64 flex flex-col h-screen overflow-y-auto">
+            
+            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 sticky top-0 z-20">
+                <div class="flex items-center gap-4">
+                    <h1 class="text-sm font-bold text-slate-800 uppercase tracking-tighter">Sistem Administrasi Teknis</h1>
+                    <span class="px-2 py-0.5 bg-tech-success/10 text-tech-success text-[10px] font-bold rounded border border-tech-success/20">SERVER ONLINE</span>
+                </div>
+                <div class="text-xs font-mono text-slate-400">
+                    17 Feb 2026 | 23:45:10
+                </div>
+            </header>
+
+            <div class="p-8 space-y-8">
+
+                <section id="dashboard">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold text-slate-800 flex items-center">
+                            <span class="w-1.5 h-6 bg-tech-accent rounded-full mr-3"></span>
+                            Dashboard Sistem
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase">Jumlah Siswa</p>
+                            <p class="text-3xl font-black text-slate-800">1.240</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase">Jumlah Guru</p>
+                            <p class="text-3xl font-black text-slate-800">86</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase">Pegawai TU</p>
+                            <p class="text-3xl font-black text-slate-800">12</p>
+                        </div>
+                        <div class="bg-tech-dark text-white p-5 rounded-xl shadow-lg">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase">Manajemen Inti</p>
+                            <div class="mt-2 text-[11px] space-y-1">
+                                <p class="flex justify-between"><span>Kepala Sekolah:</span> <span class="font-bold text-tech-accent">Aktif</span></p>
+                                <p class="flex justify-between"><span>Wakil Kepala:</span> <span class="font-bold text-tech-accent">Aktif</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="backup" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h2 class="text-lg font-bold text-slate-800 mb-6">Backup Database</h2>
+                        <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-dashed border-slate-300">
+                            <div>
+                                <p class="text-sm font-bold text-slate-700">Backup Otomatis Terakhir</p>
+                                <p class="text-xs text-slate-500 font-mono mt-1">backup_db_20260217_2200.sql</p>
+                            </div>
+                            <button class="bg-tech-dark text-white px-6 py-2 rounded-lg text-xs font-bold hover:bg-slate-800 flex items-center gap-2 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Jalankan Backup Sekarang
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-widest">Riwayat Backup (7 Hari Terakhir)</p>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between text-xs py-2 border-b border-slate-100">
+                                    <span class="font-mono text-slate-500">16 Feb 2026, 22:00</span>
+                                    <span class="font-bold">124 MB</span>
+                                    <span class="text-tech-success font-bold">Success</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs py-2 border-b border-slate-100">
+                                    <span class="font-mono text-slate-500">15 Feb 2026, 22:00</span>
+                                    <span class="font-bold">122 MB</span>
+                                    <span class="text-tech-success font-bold">Success</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-900 text-white p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg">Cloud Sync</h3>
+                            <p class="text-xs text-blue-200 mt-2 leading-relaxed italic">Backup database juga secara otomatis diunggah ke server cloud setiap 24 jam untuk redundansi data.</p>
+                        </div>
+                        <div class="mt-8">
+                            <div class="w-full bg-blue-800 h-1 rounded-full overflow-hidden">
+                                <div class="bg-tech-accent h-full w-4/5"></div>
+                            </div>
+                            <p class="text-[10px] mt-2 text-blue-200">Kapasitas Cloud: 4.2 GB / 5 GB</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="config" class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-800 mb-8">Konfigurasi Aplikasi</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="space-y-6">
+                            <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Visual & Identitas</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-2">Logo Sekolah</label>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-16 h-16 bg-slate-100 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center text-[10px] text-slate-400">
+                                            LOGO
+                                        </div>
+                                        <button class="text-xs font-bold text-tech-accent border border-tech-accent px-4 py-2 rounded-lg hover:bg-tech-accent hover:text-white transition-all">Ganti Logo</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-2">Warna Tema Utama</label>
+                                    <div class="flex gap-2">
+                                        <button class="w-8 h-8 rounded-full bg-blue-900 border-2 border-white ring-1 ring-slate-300"></button>
+                                        <button class="w-8 h-8 rounded-full bg-emerald-700"></button>
+                                        <button class="w-8 h-8 rounded-full bg-rose-700"></button>
+                                        <button class="w-8 h-8 rounded-full bg-slate-800"></button>
+                                        <input type="color" class="w-8 h-8 rounded-full overflow-hidden border-none outline-none cursor-pointer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Detail Sekolah</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Nama Lengkap Sekolah</label>
+                                    <input type="text" value="SMA Negeri 1 Jaya Merdeka" class="w-full bg-slate-50 border-b border-slate-200 py-2 px-1 text-sm font-bold text-slate-700 focus:border-tech-accent outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Alamat Instansi</label>
+                                    <textarea class="w-full bg-slate-50 border-b border-slate-200 py-2 px-1 text-sm text-slate-600 focus:border-tech-accent outline-none transition-all h-16 resize-none">Jl. Pendidikan No. 45, Kota Cemerlang, Indonesia</textarea>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Telepon</label>
+                                        <input type="text" value="(021) 555-0192" class="w-full bg-slate-50 border-b border-slate-200 py-2 px-1 text-sm font-mono focus:border-tech-accent outline-none transition-all">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Email Resmi</label>
+                                        <input type="email" value="info@sman1jaya.sch.id" class="w-full bg-slate-50 border-b border-slate-200 py-2 px-1 text-sm font-mono focus:border-tech-accent outline-none transition-all">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 pt-6 border-t border-slate-100 flex justify-end">
+                        <button class="bg-tech-success text-white px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-emerald-100 hover:bg-emerald-600 transition-all">
+                            Simpan Seluruh Perubahan
+                        </button>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

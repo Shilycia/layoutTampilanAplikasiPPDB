@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurasi Campaign - PASS SYSTEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tech: {
+                            sidebar: '#2B4175', 
+                            active: '#22AD73',  
+                            bg: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-tech-bg font-sans text-slate-700">
+
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-tech-sidebar text-white flex flex-col fixed h-full shadow-xl z-10 hidden md:flex">
+            <div class="h-16 flex items-center px-6 border-b border-white/10">
+                <span class="font-bold text-lg tracking-wide uppercase">PASS SYSTEM</span>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 bg-tech-active/20 text-tech-active rounded-lg font-medium border-r-4 border-tech-active">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+                    Config Campaign
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                    Config Aplikasi
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 md:ml-64 flex flex-col h-screen overflow-y-auto">
+            <header class="h-16 bg-white border-b flex items-center justify-between px-8 sticky top-0 z-20">
+                <div class="flex items-center gap-2">
+                    <h1 class="text-sm font-bold text-slate-800 uppercase tracking-tighter">ADMIN TEKNIS</h1>
+                    <span class="px-2 py-0.5 bg-tech-active/10 text-tech-active text-[10px] font-bold rounded italic uppercase">Campaign Engine</span>
+                </div>
+                <button class="bg-red-50 text-red-600 px-3 py-1.5 rounded-lg text-xs font-bold border border-red-100">Logout</button>
+            </header>
+
+            <div class="p-8 space-y-8">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                        <h2 class="text-xs font-bold text-slate-800 uppercase tracking-widest">Master Campaign Info</h2>
+                        <span class="text-[10px] font-mono text-slate-400">UUID: 550e8400-e29b-41d4-a716...</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Nama Campaign (name)</label>
+                            <input type="text" value="PPDB TA 2026/2027" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold outline-none focus:ring-1 focus:ring-tech-sidebar">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Status (status)</label>
+                            <select class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold outline-none focus:ring-1 focus:ring-tech-sidebar">
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Campaign ID</label>
+                            <input type="text" value="102" disabled class="w-full px-4 py-2.5 bg-slate-200 border border-slate-200 rounded-xl text-sm font-bold text-slate-500 italic">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                        <h2 class="text-xs font-bold text-slate-800 uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-1.5 h-4 bg-tech-active rounded-full"></span> Campaign Periods
+                        </h2>
+                        <button class="bg-tech-active text-white px-4 py-2 rounded-xl text-[10px] font-bold hover:bg-green-700 transition-all shadow-lg shadow-green-100">
+                            + TAMBAH PERIODE
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-50 text-[10px] text-slate-500 font-bold uppercase tracking-widest border-b">
+                                <tr>
+                                    <th class="px-6 py-4">ID</th>
+                                    <th class="px-6 py-4">Period Name</th>
+                                    <th class="px-6 py-4">Start Event</th>
+                                    <th class="px-6 py-4">End Event</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4 text-right">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-[11px] font-medium">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-6 py-4 font-mono">1</td>
+                                    <td class="px-6 py-4 font-bold text-slate-800 uppercase">Gelombang 1 - Prestasi</td>
+                                    <td class="px-6 py-4 text-slate-500 italic">2026-03-01 08:00</td>
+                                    <td class="px-6 py-4 text-slate-500 italic">2026-04-30 23:59</td>
+                                    <td class="px-6 py-4">
+                                        <span class="px-2 py-1 bg-green-50 text-green-700 rounded text-[9px] font-bold">ACTIVE</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button class="text-tech-sidebar font-bold hover:underline">Edit</button>
+                                        <button class="text-red-500 font-bold hover:underline">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-6 py-4 font-mono">2</td>
+                                    <td class="px-6 py-4 font-bold text-slate-800 uppercase">Gelombang 2 - Reguler</td>
+                                    <td class="px-6 py-4 text-slate-500 italic">2026-05-01 08:00</td>
+                                    <td class="px-6 py-4 text-slate-500 italic">2026-06-30 23:59</td>
+                                    <td class="px-6 py-4">
+                                        <span class="px-2 py-1 bg-slate-100 text-slate-400 rounded text-[9px] font-bold uppercase italic">Inactive</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button class="text-tech-sidebar font-bold hover:underline">Edit</button>
+                                        <button class="text-red-500 font-bold hover:underline">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t border-slate-100 text-[9px] text-slate-400 italic font-mono">
+                        * Data sinkron dengan table: campaign_period (uuid, name, status, start_event, end_event, start_time, end_time)
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3">
+                    <button class="px-6 py-3 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-400 hover:bg-slate-50 transition-all">BATALKAN PERUBAHAN</button>
+                    <button class="px-8 py-3 bg-tech-sidebar text-white rounded-xl text-xs font-bold shadow-xl shadow-blue-900/20 hover:bg-blue-900 transition-all uppercase tracking-widest">Simpan Konfigurasi</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

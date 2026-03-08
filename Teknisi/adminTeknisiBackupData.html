@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup Database - PASS SYSTEM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tech: {
+                            sidebar: '#2B4175', /* Warna Sidebar Pass System */
+                            active: '#22AD73',  /* Warna Hijau Indikator */
+                            accent: '#4F6BB0',  /* Warna Biru Tombol */
+                            bg: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-tech-bg font-sans text-slate-700">
+
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-tech-sidebar text-white flex flex-col fixed h-full shadow-xl z-10 hidden md:flex">
+            <div class="h-16 flex items-center px-6 border-b border-white/10">
+                <span class="font-bold text-lg tracking-wide uppercase">PASS SYSTEM</span>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 bg-tech-active/20 text-tech-active rounded-lg font-medium border-r-4 border-tech-active">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    Backup Database
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                    Config Aplikasi
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 md:ml-64 flex flex-col h-screen overflow-y-auto">
+            <header class="h-16 bg-white border-b flex items-center justify-between px-8 sticky top-0 z-20">
+                <div class="flex items-center gap-2">
+                    <h1 class="text-sm font-bold text-slate-800 uppercase tracking-tighter">Admin Teknis</h1>
+                    <span class="flex items-center gap-1.5 px-2 py-0.5 bg-tech-active/10 text-tech-active text-[10px] font-bold rounded italic">
+                        <span class="w-1.5 h-1.5 bg-tech-active rounded-full animate-pulse"></span> DATABASE ENGINE: ACTIVE
+                    </span>
+                </div>
+                <div class="flex items-center gap-4 text-xs font-mono text-slate-400">
+                    17 Feb 2026 | 23:45:10
+                    <button class="bg-red-50 text-red-600 px-3 py-1.5 rounded-lg text-xs font-bold border border-red-100 ml-4">Logout</button>
+                </div>
+            </header>
+
+            <div class="p-8 space-y-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="lg:col-span-1 space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                Manual Trigger
+                            </h3>
+                            <button class="w-full bg-tech-accent hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-200 flex items-center justify-center gap-2 text-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0l-4-4m4 4V4"></path></svg>
+                                BACKUP SEKARANG
+                            </button>
+                            <p class="text-[10px] text-slate-400 mt-4 text-center italic">Estimasi Waktu Proses: 45 detik</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Informasi Penyimpanan</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-[10px] mb-1 font-bold">
+                                        <span>Local Disk (SSD)</span>
+                                        <span class="text-tech-accent">72% Full</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-tech-accent h-full" style="width: 72%"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                        <p class="text-[9px] text-slate-400 uppercase font-bold">DB Size</p>
+                                        <p class="text-sm font-bold text-slate-700">428 MB</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                        <p class="text-[9px] text-slate-400 uppercase font-bold">Tables</p>
+                                        <p class="text-sm font-bold text-slate-700">158</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2">
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 h-full overflow-hidden flex flex-col">
+                            <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-tech-sidebar text-white">
+                                <h2 class="text-xs font-bold uppercase tracking-wider">Riwayat Screen Backup</h2>
+                                <span class="text-[10px] opacity-70 italic font-mono">Total: 154 Snapshots</span>
+                            </div>
+                            <div class="overflow-y-auto flex-1 max-h-[400px]">
+                                <table class="w-full text-left">
+                                    <thead class="bg-slate-50 text-[10px] text-slate-500 font-bold uppercase tracking-widest sticky top-0 border-b">
+                                        <tr>
+                                            <th class="px-6 py-4 italic">Tanggal & Waktu</th>
+                                            <th class="px-6 py-4 italic">File Name</th>
+                                            <th class="px-6 py-4 italic">Size</th>
+                                            <th class="px-6 py-4 italic">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100 text-[11px] font-medium">
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <td class="px-6 py-4 text-slate-400 italic">16 Feb 2026, 22:00</td>
+                                            <td class="px-6 py-4 font-mono text-tech-accent">backup_db_20260216.sql</td>
+                                            <td class="px-6 py-4">124 MB</td>
+                                            <td class="px-6 py-4"><span class="text-tech-active font-bold italic underline decoration-tech-active/30">Sukses</span></td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition-colors">
+                                            <td class="px-6 py-4 text-slate-400 italic">15 Feb 2026, 22:00</td>
+                                            <td class="px-6 py-4 font-mono text-tech-accent">backup_db_20260215.sql</td>
+                                            <td class="px-6 py-4">124 MB</td>
+                                            <td class="px-6 py-4"><span class="text-tech-active font-bold italic underline decoration-tech-active/30">Sukses</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-2xl shadow-2xl border border-slate-800 overflow-hidden">
+                    <div class="px-6 py-3 border-b border-white/5 flex items-center justify-between bg-zinc-900/50">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 bg-tech-active rounded-full"></span>
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest">Live System Log</span>
+                        </div>
+                        <div class="flex gap-1.5">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-amber-500/20"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
+                        </div>
+                    </div>
+                    <div class="p-6 font-mono text-[11px] leading-relaxed text-slate-300 space-y-1 h-32 overflow-y-auto">
+                        <p><span class="text-tech-active">[INFO]</span> [2026-02-17 22:00:01] Memulai proses Screen Backup otomatis harian...</p>
+                        <p><span class="text-tech-active">[INFO]</span> [2026-02-17 22:00:34] Melakukan kompresi data (gzip) ke direktori /backup/sql/...</p>
+                        <p><span class="text-tech-active">[INFO]</span> [2026-02-17 22:00:45] Backup berhasil diselesaikan: backup_db_20260217.sql (124 MB)</p>
+                        <p><span class="text-slate-500 italic">[IDLE] Menunggu pemicu manual atau jadwal berikutnya...</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

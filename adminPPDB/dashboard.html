@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin PPDB - Smart School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ppdb: {
+                            sidebar: '#2B4175', // Konsisten dengan sidebar Admin Teknis
+                            primary: '#22AD73', // Hijau identitas PPDB
+                            bg: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-ppdb-bg font-sans text-slate-700">
+
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-ppdb-sidebar text-white flex flex-col fixed h-full shadow-xl z-10 hidden md:flex">
+            <div class="h-16 flex items-center px-6 border-b border-white/10">
+                <span class="font-bold text-lg tracking-wide uppercase">PASS SYSTEM</span>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a href="#" class="flex items-center px-4 py-3 bg-ppdb-primary/20 text-ppdb-primary rounded-lg font-medium border-r-4 border-ppdb-primary">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    Dashboard PPDB
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Verifikasi Berkas
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 text-white/70 hover:bg-white/10 rounded-lg transition-all">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Data Pendaftar
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 md:ml-64 flex flex-col h-screen overflow-y-auto">
+            <header class="h-16 bg-white border-b flex items-center justify-between px-8 sticky top-0 z-20">
+                <div class="flex items-center gap-2">
+                    <h1 class="text-sm font-bold text-slate-800 uppercase tracking-tighter">ADMIN PPDB</h1>
+                    <span class="px-2 py-0.5 bg-ppdb-primary/10 text-ppdb-primary text-[10px] font-bold rounded">GELOMBANG 1 BUKA</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="bg-red-50 text-red-600 px-3 py-1.5 rounded-lg text-xs font-bold border border-red-100">Logout</button>
+                </div>
+            </header>
+
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Pendaftar</p>
+                        <p class="text-3xl font-black text-slate-800 mt-1">842</p>
+                        <div class="mt-2 text-[10px] text-ppdb-primary font-bold">↑ 24 Siswa hari ini</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Perlu Verifikasi</p>
+                        <p class="text-3xl font-black text-amber-500 mt-1">156</p>
+                        <div class="mt-2 text-[10px] text-slate-400 italic">Berkas belum diperiksa</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Lolos Seleksi</p>
+                        <p class="text-3xl font-black text-ppdb-primary mt-1">420</p>
+                        <div class="mt-2 text-[10px] text-slate-400 italic">Kuota tersedia: 500</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Cabut Berkas</p>
+                        <p class="text-3xl font-black text-red-500 mt-1">12</p>
+                        <div class="mt-2 text-[10px] text-slate-400 italic">Data dibatalkan</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                        <h2 class="text-sm font-bold text-slate-800 uppercase">Pendaftar Terbaru</h2>
+                        <button class="text-ppdb-primary text-xs font-bold hover:underline">Lihat Semua</button>
+                    </div>
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-50 text-[10px] text-slate-500 font-bold uppercase tracking-widest border-b">
+                            <tr>
+                                <th class="px-6 py-4">No. Registrasi</th>
+                                <th class="px-6 py-4">Nama Lengkap</th>
+                                <th class="px-6 py-4">Asal Sekolah</th>
+                                <th class="px-6 py-4">Status Berkas</th>
+                                <th class="px-6 py-4 text-right">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-xs">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 font-mono font-bold">PPDB-2026-001</td>
+                                <td class="px-6 py-4 font-semibold text-slate-800">Andini Putri Pratama</td>
+                                <td class="px-6 py-4 text-slate-500">SMP Negeri 1 Merdeka</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-ppdb-primary/10 text-ppdb-primary rounded text-[10px] font-bold">TERVERIFIKASI</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="bg-ppdb-sidebar text-white px-3 py-1 rounded text-[10px] font-bold">Detail</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 font-mono font-bold">PPDB-2026-002</td>
+                                <td class="px-6 py-4 font-semibold text-slate-800">Budi Hartono</td>
+                                <td class="px-6 py-4 text-slate-500">SMP Jaya Bangsa</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-amber-50 text-amber-600 rounded text-[10px] font-bold">PENDING</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="bg-ppdb-sidebar text-white px-3 py-1 rounded text-[10px] font-bold">Detail</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
